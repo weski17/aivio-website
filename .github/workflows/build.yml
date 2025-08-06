@@ -1,0 +1,35 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Code auschecken
+        uses: actions/checkout@v3
+
+      - name: 🟢 Node.js installieren
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: 📦 Abhängigkeiten installieren
+        run: npm install --legacy-peer-deps
+
+      - name: 🛠️ Projekt bauen
+        run: npm run build
+
+      - name: ✅ Lint prüfen (optional)
+        run: npm run lint
+
+      - name: 🧪 Tests ausführen (optional, falls vorhanden)
+        run: npm test
