@@ -1,0 +1,46 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+.DS_Store
+
+# Next.js build output
+.next/
+out/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+
+# GitHub workflows
+.github/
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
+*.tar.gz
+
+# Optional: ignore static exports if not needed
+/public/static/
+
+# Optional: ignore lockfiles you don't use
+yarn.lock
+pnpm-lock.yaml
+
+# Allow lockfile you use
+!package-lock.json
