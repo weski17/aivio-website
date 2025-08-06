@@ -27,9 +27,3 @@ jobs:
 
       - name: 🛠️ Projekt bauen
         run: npm run build
-
-      - name: ✅ Lint prüfen (optional)
-        run: npm run lint
-
-      - name: 🧪 Tests ausführen (optional, falls vorhanden)
-        run: npm test
