@@ -9,7 +9,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Aivio - Social Media Analytics',
   description: 'Professional analytics tools for TikTok, Instagram and Facebook',
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.ico', // Favicon (standard)
+    shortcut: '/favicon.ico' // Browser-Symbol
+  },
 }
 
 export default function RootLayout({
